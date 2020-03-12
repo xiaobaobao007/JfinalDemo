@@ -14,7 +14,9 @@ import com.xiaobaobao.demo.model.sys.User;
  */
 public class DemoConfig extends JFinalConfig {
 
+	//http://localhost/bmy/hello
 	//http://localhost/bmy/login?a=root&b=root
+	//http://localhost/bmy/logout/root-root
 	public static void main(String[] args) {
 		JFinal.start("WebRoot", 80, "/", 5);
 	}
@@ -50,6 +52,7 @@ public class DemoConfig extends JFinalConfig {
 	}
 
 	public void configInterceptor(Interceptors me) {
+		me.add(new DemoInterceptor());
 	}
 
 	public void configHandler(Handlers me) {
