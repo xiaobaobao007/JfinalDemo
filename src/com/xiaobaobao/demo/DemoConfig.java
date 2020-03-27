@@ -18,7 +18,7 @@ public class DemoConfig extends JFinalConfig {
 	//http://localhost/bmy/login?a=root&b=root
 	//http://localhost/bmy/logout/root-root
 	public static void main(String[] args) {
-		JFinal.start("WebRoot", 80, "/", 5);
+		JFinal.start("WebRoot", 8080, "/", 5);
 	}
 
 	/**
